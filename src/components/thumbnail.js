@@ -4,14 +4,13 @@ import {
   TouchableOpacity,
   ImageBackground,
   Image,
-  ViewPropTypes,
-  ImagePropTypes,
   Linking,
   StyleSheet,
 } from 'react-native';
 
 import { DEFAULT_WIDTH, TYPES } from './constants';
 import { getVideoId } from '../helpers';
+import { ImagePropTypes, ViewPropTypes } from 'deprecated-react-native-prop-types';
 
 export default class Thumbnail extends PureComponent {
   constructor(props) {
@@ -34,7 +33,7 @@ export default class Thumbnail extends PureComponent {
       PropTypes.number,
       PropTypes.string,
     ]),
-    iconStyle: Image.propTypes.style,
+    iconStyle: ImagePropTypes.style,
     onPress: PropTypes.func,
     onPressError: PropTypes.func,
     style: ViewPropTypes.style,
